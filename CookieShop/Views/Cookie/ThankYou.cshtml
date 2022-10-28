@@ -1,0 +1,16 @@
+﻿@model List<CookieViewModel>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@foreach(var order in Model)
+{
+<div class="text-center">
+    <h1>Hi!! @order.Username, Your order has been placed!</h1><br />
+    <h3>@order.CookieCount @order.Flavour Cookies will be delivered at @order.Place .</h3><br />
+    <h5>Redeem Code : @order.RedeemCode</h5>
+    <a class="btn btn-success" asp-controller="Cookie" asp-action="Index">Confirm</a>
+</div>
+}

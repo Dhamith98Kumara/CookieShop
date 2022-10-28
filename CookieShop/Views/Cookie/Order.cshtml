@@ -1,0 +1,42 @@
+﻿@model CookieViewModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="row">
+    <div class="col-5">
+        <div class="card-header"><h2>Order Now Cookie</h2></div>
+        <div class="card-body">
+            <form method="post" asp-controller="Cookie" asp-action="OrderCookie">
+                <div class="mb-3">
+                    <label>Username : </label>
+                    <input type="text" class="form-control" placeholder="your UserName" asp-for="Username" />
+                </div>
+                <div class="mb-3">
+                    <label>Number of Cookies : </label>
+                    <input type="number" class="form-control" placeholder="Enter Number" asp-for="CookieCount" />
+                </div>
+                <div class="mb-3">
+                    <label>Place : </label>
+                    <input type="text" class="form-control" placeholder="Enter Place" asp-for="Place" />
+                </div>
+                <div class="mb-3">
+                    <label>Flavour : </label>
+                    <select class="form-control" asp-for="Flavour">
+                        <option value="Chocolate">Chocolate</option>
+                        <option value="Vanilla">Vanilla</option>
+                        <option value="Cream">Cream</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label>Redeem Code : </label>
+                    <input type="text" class="form-control" placeholder="your coupon code" asp-for="RedeemCode" />
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-danger">Order Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
